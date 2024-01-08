@@ -1,0 +1,82 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - Bye
+- intent: image_search
+  examples: |
+    - image
+    - picture
+- intent: video_search
+  examples: |
+    - video
+    - movie
+- intent: capture_plot
+  examples: |
+    - a woman is getting on a cup
+    - man is preparing some food
+    - the lady is talking on the phone
+    - a man is dancing on a trampoline
+    - the dogs are playing on the backyard
+    - a woman is getting and to a building
+    - a man is riding a horse
+    - two people are getting on party
+    - woman is driving a car
+    - woman is walking on the rope
+    - child in pink dress is climbing up set of stairs in an entry way
+    - boston terrier is running in the grass
+    - little boy is standing on the street while man in overalls is working on stone wall
+    - brown dog running on lawn near garden hose
+    - boy smiles in front of stony wall in city
+    - man is playing a violin
+    - girl going into wooden building
+    - man wears an orange hat and glasses
+    - main is playing on violin
+    - man is running
+- intent: positive
+  examples: |
+    - good
+    - ok
+    - great
+    - nice
+    - agree
+- intent: negative
+  examples: |
+    - no
+    - sad
+    - false
+    - deny
+- intent: choice1
+  examples: |
+    - name
+    - table
+- intent: choice2
+  examples: |
+    - name
+    - table

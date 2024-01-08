@@ -1,0 +1,16 @@
+# rules:
+#  - rule: activate search form
+#    steps:
+#    - action: utter_ask_query
+#    - action: search_process
+#    - active_loop: search_process
+
+# simple fallback:
+ - rule: Collect feedback
+   steps:
+   - action: action_image_search
+   - action: utter_collect_feedback
+   - intent: negative
+   - action: action_ask_clarify_1
+  
+

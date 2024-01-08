@@ -1,0 +1,334 @@
+version: "3.1"
+
+stories:
+
+- story: image_search_1
+  steps:
+  #- action: action_hello_world
+  - intent: greet
+  - action: utter_greet
+  #- action: search_process
+  #- active_loop: search_process
+  - action: utter_select
+  - intent: image_search
+  - action: utter_ask_query
+  - slot_was_set:
+    - requested_slot: query
+  - intent: capture_plot
+  - slot_was_set:
+    - query: text
+  - action: action_image_search
+  - action: utter_collect_feedback
+  - intent: positive
+  - action: utter_positive
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: image_search_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  #- action: search_process
+  #- active_loop: search_process
+  - action: utter_select
+  - intent: image_search
+  - action: utter_ask_query
+  - slot_was_set:
+    - requested_slot: query
+  - intent: capture_plot
+  - slot_was_set:
+    - query: text
+  - action: action_image_search
+  - action: utter_collect_feedback
+  - intent: negative
+  - action: action_ask_clarify_1
+  - intent: choice1
+  - action: action_filter_by_labels
+  - action: utter_collect_feedback
+  - intent: positive
+  - action: utter_positive
+  - intent: goodbye
+  - action: utter_goodbye
+  
+- story: image_search_3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  #- action: search_process
+  #- active_loop: search_process
+  - action: utter_select
+  - intent: image_search
+  - action: utter_ask_query
+  - slot_was_set:
+    - requested_slot: query
+  - intent: capture_plot
+  - slot_was_set:
+    - query: text
+  - action: action_image_search
+  - action: utter_collect_feedback
+  - intent: negative
+  - action: action_ask_clarify_1
+  - intent: choice2
+  - action: action_filter_by_labels
+  - action: utter_collect_feedback
+  - intent: positive
+  - action: utter_positive
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: image_search_2_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  #- action: search_process
+  #- active_loop: search_process
+  - action: utter_select
+  - intent: image_search
+  - action: utter_ask_query
+  - slot_was_set:
+    - requested_slot: query
+  - intent: capture_plot
+  - slot_was_set:
+    - query: text
+  - action: action_image_search
+  - action: utter_collect_feedback
+  - intent: negative
+  - action: action_ask_clarify_1
+  - intent: choice1
+  - action: action_filter_by_labels
+  - action: utter_collect_feedback
+  - intent: negative
+  - action: action_ask_clarify_1
+  - intent: choice1
+  - action: action_filter_by_labels_2
+  - action: utter_collect_feedback
+  - intent: positive
+  - action: utter_positive
+  - intent: goodbye
+  - action: utter_goodbye
+  
+- story: image_search_2_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  #- action: search_process
+  #- active_loop: search_process
+  - action: utter_select
+  - intent: image_search
+  - action: utter_ask_query
+  - slot_was_set:
+    - requested_slot: query
+  - intent: capture_plot
+  - slot_was_set:
+    - query: text
+  - action: action_image_search
+  - action: utter_collect_feedback
+  - intent: negative
+  - action: action_ask_clarify_1
+  - intent: choice1
+  - action: action_filter_by_labels
+  - action: utter_collect_feedback
+  - intent: negative
+  - action: action_ask_clarify_1
+  - intent: choice2
+  - action: action_filter_by_labels_2
+  - action: utter_collect_feedback
+  - intent: positive
+  - action: utter_positive
+  - intent: goodbye
+  - action: utter_goodbye
+  
+  
+- story: image_search_3_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  #- action: search_process
+  #- active_loop: search_process
+  - action: utter_select
+  - intent: image_search
+  - action: utter_ask_query
+  - slot_was_set:
+    - requested_slot: query
+  - intent: capture_plot
+  - slot_was_set:
+    - query: text
+  - action: action_image_search
+  - action: utter_collect_feedback
+  - intent: negative
+  - action: action_ask_clarify_1
+  - intent: choice2
+  - action: action_filter_by_labels
+  - action: utter_collect_feedback
+  - intent: negative
+  - action: action_ask_clarify_1
+  - intent: choice1
+  - action: action_filter_by_labels_2
+  - action: utter_collect_feedback
+  - intent: positive
+  - action: utter_positive
+  - intent: goodbye
+  - action: utter_goodbye
+  
+  
+  
+- story: image_search_3_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  #- action: search_process
+  #- active_loop: search_process
+  - action: utter_select
+  - intent: image_search
+  - action: utter_ask_query
+  - slot_was_set:
+    - requested_slot: query
+  - intent: capture_plot
+  - slot_was_set:
+    - query: text
+  - action: action_image_search
+  - action: utter_collect_feedback
+  - intent: negative
+  - action: action_ask_clarify_1
+  - intent: choice2
+  - action: action_filter_by_labels
+  - action: utter_collect_feedback
+  - intent: negative
+  - action: action_ask_clarify_1
+  - intent: choice2
+  - action: action_filter_by_labels_2
+  - action: utter_collect_feedback
+  - intent: positive
+  - action: utter_positive
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+- story: video_search_1
+  steps:
+  #- action: action_hello_world
+  - intent: greet
+  - action: utter_greet
+  #- action: search_process
+  #- active_loop: search_process
+  - action: utter_select
+  - intent: video_search
+  - action: utter_ask_query
+  - slot_was_set:
+    - requested_slot: query
+  - intent: capture_plot
+  - slot_was_set:
+    - query: text
+  - action: action_movie_search
+  - action: utter_collect_feedback
+  - intent: positive
+  - action: utter_positive
+  - intent: goodbye
+  - action: utter_goodbye
+ 
+- story: video_search_2
+  steps:
+  #- action: action_hello_world
+  - intent: greet
+  - action: utter_greet
+  #- action: search_process
+  #- active_loop: search_process
+  - action: utter_select
+  - intent: video_search
+  - action: utter_ask_query
+  - slot_was_set:
+    - requested_slot: query
+  - intent: capture_plot
+  - slot_was_set:
+    - query: text
+  - action: action_movie_search
+  - action: utter_collect_feedback
+  - intent: negative
+  - action: action_ask_clarify_1
+  - intent: choice1
+  - action: action_movie_filter
+  - action: utter_collect_feedback
+  - intent: positive
+  - action: utter_positive
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+- story: video_search_3
+  steps:
+  #- action: action_hello_world
+  - intent: greet
+  - action: utter_greet
+  #- action: search_process
+  #- active_loop: search_process
+  - action: utter_select
+  - intent: video_search
+  - action: utter_ask_query
+  - slot_was_set:
+    - requested_slot: query
+  - intent: capture_plot
+  - slot_was_set:
+    - query: text
+  - action: action_movie_search
+  - action: utter_collect_feedback
+  - intent: negative
+  - action: action_ask_clarify_1
+  - intent: choice2
+  - action: action_movie_filter
+  - action: utter_collect_feedback
+  - intent: positive
+  - action: utter_positive
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+# - story: interactive_story_1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: image_search
+#   - action: search_process
+#   - active_loop: search_process
+#   - slot_was_set:
+#     - requested_slot: query
+#   - intent: capture_plot
+#   - slot_was_set:
+#     - query: man wears an orange hat and glasses
+#   - action: action_image_search
+#   - intent: goodbye
+#   - action: utter_goodbye
+#   - intent: goodbye
+
+# - story: interactive_story_1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: capture_plot
+#   - slot_was_set:
+#     - query: man wears an orange hat and glasses
+#   - action: action_image_search
+#   - action: utter_collect_feedback
+#   - intent: positive
+#   - action: utter_positive
+#   - intent: goodbye
+#   - action: utter_goodbye
+#   - intent: negative
+
+
+
+
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_select
+  - intent: video_search
+  - action: utter_ask_query
+  - intent: capture_plot
+  - slot_was_set:
+    - query: text
+  - action: action_movie_search
+  - action: utter_collect_feedback
+  - intent: positive
+  - action: utter_positive
