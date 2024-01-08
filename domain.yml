@@ -1,0 +1,83 @@
+version: '3.1'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- capture_plot
+- choice1
+- choice2
+- goodbye
+- greet
+- image_search
+- negative
+- positive
+- video_search
+slots:
+  query:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      intent: capture_plot
+responses:
+  utter_greet:
+  - text: |
+      Hello! I am your multimedia search assitant. How could I help you?
+  - text: |
+      Greetings! I am here to assist you with your image search. How could I help you today?
+  - text: |
+     Hey there! I am here to help you find the image or video. What are you looking for? Just tell me and I will get right on it!  
+  utter_ask_query:
+  - text: |
+      What is your search query?
+  - text: |
+      Please enter your desired text search query
+  utter_processed:
+  - text: |
+      Your search query is {query} 
+  utter_positive:
+  - text: |
+      Glad to hear it!
+  utter_goodbye:
+  - text: Bye
+  - text: Goodbye
+  - text: See you later
+  - text: Come back later
+  utter_collect_feedback:
+  - text: Is it relevant info?
+  - text: Could I improve the search results?
+  - text: Are you satisfied with the provided results?
+  - text: Is this what you were searching for?
+  
+    buttons:
+    - title: Yes
+      payload: /positive
+    - title: No
+      payload: /negative
+  utter_select:
+  - text: Choose you mode
+    buttons:
+    - title: Image
+      payload: /image_search
+    - title: Video
+      payload: /video_search
+actions:
+- '...'
+- action_ask_clarify_1
+- action_filter_by_labels
+- action_filter_by_labels_2
+- action_hello_world
+- action_image_search
+- action_movie_search
+- action_movie_filter
+- utter_ask_query
+- utter_collect_feedback
+- utter_goodbye
+- utter_greet
+- utter_positive
+- utter_processed
+- utter_select
+forms:
+  search_process:
+    required_slots:
+    - query

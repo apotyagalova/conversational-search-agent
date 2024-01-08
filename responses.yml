@@ -1,0 +1,27 @@
+responses:
+   utter_greet:
+       - text: |
+            Hello! I am your image search assitant. Please, enter your search query.
+   utter_ask_query:
+       - text: |
+           What is your search query?
+   utter_processed:
+       - text: |
+           Your search query is {query} 
+       - text: |
+           Your search query is {query}.
+   utter_positive:
+      - text: |
+          Glad to hear it!
+    utter_collect_feedback:
+      # - condition:
+      #   - type: slot
+      #     name: user_name
+      #     value: null
+      - text: Is it relevant info?
+      buttons:
+        - title: Agree
+          payload: /positive
+        - title: Deny
+          payload: /negative
+     

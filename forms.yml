@@ -1,0 +1,12 @@
+slots:
+  query:
+    type: text
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: search_process
+        requested_slot: query
+forms:
+  search_process:
+    required_slots:
+    - query
