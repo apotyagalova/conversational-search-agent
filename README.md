@@ -36,7 +36,7 @@ python app.py
 ```
 python -m http.server 8000
 ```
-Demo video with simplest scenarios is available here: https://drive.google.com/file/d/1u7t5FhRgffGrWqI0rqGNwGZXSRv3D4C-/view?usp=sharing
+Demo video with basic scenarios is available here: https://drive.google.com/file/d/1u7t5FhRgffGrWqI0rqGNwGZXSRv3D4C-/view?usp=sharing
 
 
 Live version is available here: http://34.252.91.139/
